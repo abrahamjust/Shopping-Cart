@@ -5,7 +5,7 @@ export default Homepage;
 
 function Homepage() {
     return (
-        <div className="homePage">
+        <div className={styles.homePage}>
             <div>
                 <h1>Trolley</h1>
                 <p>For your shopping needs</p>
