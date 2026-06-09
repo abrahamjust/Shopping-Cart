@@ -1,8 +1,20 @@
 import { Link, Outlet } from "react-router";
 import styles from "./MainPage.module.css";
+import { useEffect, useState } from 'react';
 export default MainPage;
 
 function MainPage() {
+
+    const [items, setItems] = useState([]);
+    const [ItemCount, setItemCount] = useState({});
+
+    // get products from api
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products?limit=10')
+            .then(res => res.json())            
+            .then(data => setItems(data))
+    }, []);
+
     return (
         <>
             <nav className={styles.MainNavBar}> 
@@ -13,7 +25,7 @@ function MainPage() {
                 <Link to="Cart" className={styles.MainNavLink}>Cart</Link>
             </nav>
             <div className={styles.MainPageContainer}>
-                <Outlet />
+                <Outlet context = {{ items, ItemCount, setItemCount }}/>
             </div>
         </>
     )

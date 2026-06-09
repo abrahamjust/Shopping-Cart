@@ -15,3 +15,31 @@
 .Itemcard:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.ItemImage {
+    width: 100%;
+    height: 75%;
+    background-color: grey;
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ButtonContainer > button {
+    text-wrap: wrap;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+.LabelContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.LabelContainer > input {
+    border-radius: 5px;
+}
