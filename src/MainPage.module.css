@@ -1,0 +1,37 @@
+.MainNavBar {
+    height: 10vh;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.MainPageContainer {
+    padding: 10px;
+}
+
+.MainNavLeft {
+    width: min(20%, 120px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainNavLink {
+    text-decoration: none;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.MainNavLink:focus  {
+    outline: 2px solid #7e8794;
+}
+
+.MainNavLink:hover {
+  color: #7e8794;
+  text-decoration: underline;
+}

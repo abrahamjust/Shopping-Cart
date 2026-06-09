@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Homepage from './Homepage.jsx';
+import MainPage from './MainPage.jsx';
 import Shop from './Shop.jsx';
 import Cart from './Cart.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router';
@@ -13,14 +14,14 @@ const router = createBrowserRouter([
     element: <Homepage />
   },
   {
-    path: "Shop",
-    element: <Shop />
-  }, 
-  {
-    path: "Cart",
-    element: <Cart />
-  }
-])
+    path: "MainPage",
+    element: <MainPage />,
+    children: [
+      { path: "Shop", element: <Shop /> },
+      { path: "Cart", element: <Cart /> }
+    ],
+  },
+]);
 
 
 createRoot(document.getElementById('root')).render(
