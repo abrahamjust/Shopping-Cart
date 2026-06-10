@@ -22,7 +22,10 @@ function MainPage() {
                     <Link to="/" className={styles.MainNavLink}>Home</Link>
                     <Link to="Shop" className={styles.MainNavLink}>Shop</Link>
                 </div>
-                <Link to="Cart" className={styles.MainNavLink}>Cart</Link>
+                <div className={styles.MainNavRight}>                    
+                    <div className={ styles.CartCounter}>{Object.keys(ItemCount).length}</div>
+                    <Link to="Cart" className={styles.MainNavLink}>Cart</Link>
+                </div>
             </nav>
             <div className={styles.MainPageContainer}>
                 <Outlet context = {{ items, ItemCount, setItemCount }}/>
