@@ -7,9 +7,6 @@ export default Shop;
 function Shop() {
     const [quantities, setQuantities] = useState({});
     const { items, ItemCount, setItemCount } = useOutletContext();
-    console.log(items);
-
-    // event handlers
 
     useEffect(() => {
         const initialQuantities = {};
@@ -20,10 +17,9 @@ function Shop() {
         setQuantities(initialQuantities);
     }, [items]);
 
-    useEffect(() => {
-        console.log(ItemCount);
-    }, [ItemCount]);
 
+    // event handlers
+    
     function handleIncrement(id) {
         setQuantities(prev => ({
             ...prev,
